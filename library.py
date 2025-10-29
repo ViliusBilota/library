@@ -56,5 +56,36 @@ while True:
             print("Įveskite knygos metus")
             year = input()
             id_counter +=1
-            item = {'id':id_counter, "author":author, "title":title, "year":year}
+            item = {'id':id_counter, "Autorius":author, "Pavadinimas":title, "Metai":year}
             library.append(item)
+        case '3':
+            print("Jūs pasirinkote redaguoti knygą")
+            print("Įrašykite knygos ID, kurią norite redaguoti")
+            edit_id = input()
+            for i, item in enumerate(library):
+                if str(item['id']) == edit_id:
+                    print(item)
+                    print("Įveskite knygos autorių")
+                    library[i]['Autorius'] = input()
+                    print("Įveskite knygos pavadinimą")
+                    library[i]['Pavadinimas'] = input()
+                    print("Įveskite knygos metus")
+                    library[i]['Metai'] = float(input())
+        case '4':
+            print("Jūs pasirinkote pašalinti knygą")
+            print("Įrašykite knygos ID, kurią norėsite šalinti")
+            del_id = input()
+            for item in library:
+                if str(item['id']) == del_id:
+                    library.remove(item)
+                    break
+        case '5':
+            print("Jūs pasirinkote palikti biblioteką")
+            break
+        case _ : #defaultas, kai ivedama belekas
+            print("Pasitikrinkite ka ivedete")
+
+
+
+
+
