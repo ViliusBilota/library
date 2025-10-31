@@ -4,27 +4,19 @@ from list_CRUD import*
 library = demo_data([])
 id_counter = 5
 
-
 while True:
-    pradzia()
-    option = input()
-    match option:
+    print("Sveiki atvykę į biblioteką. Pasirinkite ką norėsite veikti:")
+    print("1. Tvarkyti autorius")
+    print("2. Tvarkyti knygas")
+    print("3. Išeiti")
+    option2 = input("Pasirinkite:")
+    match option2:
         case '1':
-            print("Jūs pasirinkote peržiūrėti esamas bibliotekos knygas")
-            knygu_perziura(library)
+            print("Atidarytas autorių valdymas")
         case '2':
-            id_counter = knygos_pridejimas(id_counter, library)
+            knygumeniu(library, id_counter)
         case '3':
-            knygos_redagavimas(library)
-        case '4':
-            knygos_trynimas(library)
-        case '5':
-            print("Jūs pasirinkote palikti biblioteką")
+            print("Pasirinkote išeiti iš bibliotekos")
             break
         case _ :
-            print("Pasitikrinkite ką įvedėte")
-
-
-
-
-
+            print('Pasitikrinkite ką įvedėte')
