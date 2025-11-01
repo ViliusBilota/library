@@ -1,15 +1,7 @@
 def knygu_perziura(library):
+    print("\nEsami autoriai:")
     for item in library:
         print(f"{item['id']}. Autorius - \"{item['author']}\", Pavadinimas - {item['title']}, Metai - {item['year']}.")
-
-
-def knygumeniu():
-    print("Pasirinkite, ką norite daryti")
-    print("1. Peržiūrėti esamas bibliotekos knygas")
-    print("2. Pridėti naują knygą")
-    print("3. Redaguoti knygą")
-    print("4. Ištrinti knygą")
-    print("5. Palikti biblioteką")
 
 def knygos_pridejimas(id_counter, library):
     print("Jūs pasirinkote pridėti naują knygą")
@@ -19,7 +11,7 @@ def knygos_pridejimas(id_counter, library):
     title = input()
     print("Įveskite knygos metus")
     year = input()
-    id_counter += 1
+    id_counter_books += 1
     item = {'id': id_counter, "author": author, "title": title, "year": year}
     library.append(item)
     return id_counter
@@ -53,7 +45,7 @@ def bibliotekos_pradzia():
     print("2.Tvarkyti knygas")
     print("3.Išeiti")
 
-def knygumeniu(library, id_counter):
+def knygumeniu(library, id_counter_books):
     while True:
         print("Pasirinkote knygas. Metas pasirinkti kitą veiksmą:")
         print("1. Peržiūrėti esamas bibliotekos knygas")
@@ -68,7 +60,7 @@ def knygumeniu(library, id_counter):
                 print("Jūs pasirinkote peržiūrėti esamas bibliotekos knygas")
                 knygu_perziura(library)
             case '2':
-                id_counter = knygos_pridejimas(id_counter, library)
+                id_counter = knygos_pridejimas(id_counter_books, library)
             case '3':
                 knygos_redagavimas(library)
             case '4':

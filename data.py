@@ -1,5 +1,5 @@
 def demo_data(library):
-    return[
+    books =[
     {
         'id': 1,
         'author': 'Antanas Škėma',
@@ -30,4 +30,11 @@ def demo_data(library):
         'title': 'Šimtas metų vienatvės',
         'year': 1967
     }]
-
+    authors =  [
+        {'id': 1, 'name': 'Antanas Škėma', 'nationality': 'Lietuvis'},
+        {'id': 2, 'name': 'Rūta Šepetys', 'nationality': 'Lietuvė'},
+        {'id': 3, 'name': 'Ernest Hemingway', 'nationality': 'Amerikietis'},
+        {'id': 4, 'name': 'George Orwell', 'nationality': 'Anglas'},
+        {'id': 5, 'name': 'Gabriel Garcia Márquez', 'nationality': 'Kolumbietis'}
+    ]
+    return books,authors

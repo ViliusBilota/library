@@ -1,8 +1,10 @@
 from data import demo_data
-from list_CRUD import*
+from list_CRUD import *
+from authors_CRUD import *
 
-library = demo_data([])
-id_counter = 5
+books, authors = demo_data([])
+id_counter_books = 5
+id_counter_authors = 5
 
 while True:
     print("Sveiki atvykę į biblioteką. Pasirinkite ką norėsite veikti:")
@@ -12,9 +14,9 @@ while True:
     option2 = input("Pasirinkite:")
     match option2:
         case '1':
-            print("Atidarytas autorių valdymas")
+            id_counter_authors = autoriu_meniu(authors, id_counter_authors)
         case '2':
-            knygumeniu(library, id_counter)
+            id_counter_books = knygumeniu(books, id_counter_books)
         case '3':
             print("Pasirinkote išeiti iš bibliotekos")
             break
