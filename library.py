@@ -3,8 +3,9 @@ from list_CRUD import *
 from authors_CRUD import *
 
 books, authors = demo_data([])
-id_counter_books = 5
-id_counter_authors = 5
+id_counter_books = len(books)
+id_counter_authors = len(authors)
+library = books
 
 while True:
     print("Sveiki atvykę į biblioteką. Pasirinkite ką norėsite veikti:")
@@ -14,7 +15,7 @@ while True:
     option2 = input("Pasirinkite:")
     match option2:
         case '1':
-            id_counter_authors = autoriu_meniu(authors, id_counter_authors)
+            id_counter_authors = autoriu_meniu(authors, id_counter_authors, library)
         case '2':
             id_counter_books = knygumeniu(books, id_counter_books)
         case '3':
