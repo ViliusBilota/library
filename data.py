@@ -1,4 +1,4 @@
-def demo_data(library):
+def demo_data():
     books =[
     {
         'id': 1,
@@ -38,3 +38,4 @@ def demo_data(library):
         {'id': 5, 'name': 'Gabriel Garcia Márquez', 'nationality': 'Kolumbietis'}
     ]
     return books,authors
+
